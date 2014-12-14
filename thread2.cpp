@@ -1,4 +1,4 @@
-// threads1.cpp : Defines the entry point for the console application.
+// thread2.cpp : Defines the entry point for the console application.
 //
 #include "stdafx.h"
 using namespace System;
