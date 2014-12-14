@@ -31,7 +31,7 @@ int main()
    ThreadStart^ threadDelegate = gcnew ThreadStart( w, &Work::DoMoreWork );
    Thread^ newThread = gcnew Thread( threadDelegate );
    newThread->Start();
-
+   newThread->Join();
    // To start a thread using a static thread procedure, specify 
    // only the address of the procedure. This is a change from  
    // earlier versions of the .NET Framework, which required  
@@ -40,6 +40,7 @@ int main()
    threadDelegate = gcnew ThreadStart( &Work::DoWork );
    newThread = gcnew Thread( threadDelegate );
    newThread->Start();
+   newThread->Join();
    Console::ReadLine();
 }
 
